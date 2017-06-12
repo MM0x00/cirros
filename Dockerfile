@@ -1,11 +1,8 @@
-FROM ubuntu:14.04.2
+FROM scratch
+MAINTAINER Eric Windisch <eric@windisch.us>
+ADD cirros-0.3.4-x86_64-lxc.tar.gz /
 
-MAINTAINER support@shiyanlou.com
-
-RUN useradd -m trylab
-
-USER trylab
-
-WORKDIR /home/trylab
-
-CMD echo "shiyanlou trylab." | wc -
+# Don't configure network
+RUN rm /etc/rc3.d/S40-network
+RUN sed -i '/is_lxc && lxc_netdown/d' /etc/init.d/rc.sysinit
+CMD ["/sbin/init"]
