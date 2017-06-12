@@ -4,16 +4,18 @@
 
 ## 软件简介
 
-软件基本信息，License，所属的类别，作用，特点等。
+CirrOS是一款专门从事云计算的小型操作系统。
+
+所属类型是操作系统
 
 ## 软件官网
 
-官网的链接
+https://launchpad.net/cirros/
 
 ## Dockerfile 使用方法
 
-运行 Docker 容器时需要的环境变量等。
+
 
 ## 资源链接
 
-- [优质教程](https://github.com/shiyanlou/trylab)
+- https://launchpad.net/cirros/
